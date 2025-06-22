@@ -1,0 +1,29 @@
+﻿@model IEnumerable<HotelReservationSystem.Models.Room>
+
+@{
+    ViewData["Title"] = "Otaqlar Siyahısı";
+}
+
+<h2>Otaqlar Siyahısı</h2>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Otaq Nömrəsi</th>
+            <th>Güc</th>
+            <th>Qiymət</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var room in Model)
+        {
+            <tr>
+                <td>@room.RoomNumber</td>
+                <td>@room.Capasity</td>
+                <td>@room.Price ₼</td>
+                <td>@(room.IsAvailable ? "Mövcuddur" : "Dolu")</td>
+            </tr>
+        }
+    </tbody>
+</table>

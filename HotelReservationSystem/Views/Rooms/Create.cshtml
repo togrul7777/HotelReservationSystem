@@ -1,0 +1,27 @@
+﻿@model HotelReservationSystem.Models.Room
+
+@{
+    ViewData["Title"] = "Yeni Otaq Əlavə Et";
+}
+
+<h2>Yeni Otaq Əlavə Et</h2>
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label asp-for="RoomNumber"></label>
+        <input asp-for="RoomNumber" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Capasity"></label>
+        <input asp-for="Capasity" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Price"></label>
+        <input asp-for="Price" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="IsAvailable"></label>
+        <input asp-for="IsAvailable" type="checkbox" />
+    </div>
+    <button type="submit" class="btn btn-success">Əlavə et</button>
+</form>
